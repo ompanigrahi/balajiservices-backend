@@ -13,11 +13,12 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-const PORT = process.env.PORT || 8080;
 
 // Log when the server starts
+const PORT = process.env.PORT || 8080;
+
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`✅ Server running on port ${PORT}`);
+  console.log(`✅ Server running on http://0.0.0.0:${PORT}`);
 });
 
 app.get("/abc", (req, res) => {
